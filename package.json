@@ -4,7 +4,8 @@
   "private": true,
   "dependencies": {},
   "devDependencies": {
-    "lambda-scripts": "0.1.1"
+    "lambda-middleware": "^0.1.0",
+    "lambda-scripts": "0.1.2"
   },
   "scripts": {
     "start": "lambda-scripts start",

@@ -1,13 +1,10 @@
 /* @flow */
 import type { LambdaContext, LambdaCallbackFunc } from './FlowTypes';
-import App from './App';
+import LambdaMiddleware from 'lambda-middleware';
 
-exports.handler = async (event: Object, context: LambdaContext, callback: LambdaCallbackFunc) => {
-  try {
-    const app = new App();
-    const result = await app.runAsync();
-    callback(null, result);
-  } catch (err) {
-    callback(err);
-  }
-};
+const app = new LambdaMiddleware();
+app.use((ctx, next) => {
+  return { result: 'HelloWorld'};
+});
+
+exports.handler = app.handler;
