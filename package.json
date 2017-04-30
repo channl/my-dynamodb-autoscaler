@@ -1,0 +1,15 @@
+{
+  "name": "my-dynamodb-autoscaler",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {},
+  "devDependencies": {
+    "lambda-scripts": "0.1.1"
+  },
+  "scripts": {
+    "start": "lambda-scripts start",
+    "build": "lambda-scripts build",
+    "test": "lambda-scripts test --env=jsdom",
+    "eject": "lambda-scripts eject"
+  }
+}
